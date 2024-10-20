@@ -1,16 +1,168 @@
+<!DocTYPE html>
 <html>
 <head>
-    <title> My first Web Page</title>
+<!--    Meta data of the page : more: title-->
+    <meta charset="UTF-8">
+    <title> Emobilis</title>
+<!--    link to the file-->
+    <link href="css/style.css" rel="stylesheet"/>
+<!--    internal CSS-->
+    <style>
+        /* Css Code */
+        button {
+            background-color: blue;
+            color: white;
+            padding: 10px;
+            margin: 10px;
+            border-radius: 5px;
+        }
+        /* to style using an id, place # infront of the id name*/
+        #btnsubmit {
+            background-color: darkred;
+            color: white;
+            padding: 10px;
+            margin: 10px;
+            border-radius: 5px;
+        }
+
+        .table{
+            width: 100%;
+            margin: 20px;
+            padding: 10px;
+            font-family: Arial;
+        }
+        td{
+            padding: 12px;
+            text-align: center;
+            border: 1px solid darkgrey;
+        }
+    </style>
 </head>
 
-<body>
-<h1> Edwin Wachira</h1>
-<h2> Edwin Wachira</h2>
-<h3> Edwin Wachira</h3>
-<h4> Edwin Wachira</h4>
-<h5> Edwin Wachira</h5>
-<h6> Edwin Wachira</h6>
+<body style="background-color: black;color: white">
+<p style="font-family: sans-serif;font-weight: bolder; color: green ">
+    I have installed Moodle version 3.4. Suddenly i saw this message in my screen when i tryid to login in my site:
+"The session partition is full. It is not possible to log in at this time. Please notify the server administrator".
+How can i fix this problem?
+</p>
+
+<!--Ordered list-->
+<ol>
+    <li>AFC Leopards</li>
+      <li>GOR Mahia</li>
+      <li>Sofa paka</li>
+      <li>Tusker FC</li>
+
+<!--unordered list-->
+</ol>
+    <li>AFC Leopards</li>
+      <li>GOR Mahia</li>
+      <li>Sofa paka</li>
+      <li>Tusker FC</li>
+
+<uL>
+<!--    Headers-->
+    <h1> Heading 1</h1>
+    <h6> Heading 2</h6>
+
+</uL>
+<!--BlockQuote-->
+    <blockquote>
+        check your config.php file to see the location of moodledata directory.   That's where one will find a sessions directory.
+Linux?  Then login as root user or sudo to root and cd /path/to/moodledata/sessions/
+rm -fR * (be in the directory above ... if not in that directory you could be doing some damage).
+Session files are small ... not large at all, so you need to inspect what space you have.
+Again, if Linux as root user:
+    </blockquote>
+
+<!--Buttons-->
+<button> Click Me</button>
+<button id="btnsubmit"> Submit Button</button>
+<!--image-->
+<img src="assets/EDDIE.jpg" width="200" height="200" alt="some image here"/>
+
+<!--tables-->
+
+<table class="table">
+    <thead>
+         <th>Position</th>
+         <th>Team Name</th>
+         <th>Points</th>
+    </thead>
+    <tbody>
+    <tr>
+        <td>1</td>
+        <td> AFC Leopards</td>
+        <td>30</td>
+    </tr>
+    <tr>
+        <td>2</td>
+        <td>sofaPaka</td>
+        <td>29</td>
+    </tr>
+    <tr>
+        <td>3</td>
+        <td>Gor Mahia</td>
+        <td>28</td>
+    </tr>
+    </tbody>
+    <tfoot>
+    <tr>
+        <td colspan="2">Total Ticket Pricing</td>
+        <td>$5.50</td>
+    </tr>
+    </tfoot>
+ </table>
+
+<table>
+    <thead>
+         <th>Position</th>
+         <th>Team Name</th>
+         <th>Points</th>
+    </thead>
+    <tbody>
+    <tr>
+        <td>1</td>
+        <td> AFC Leopards</td>
+        <td>30</td>
+    </tr>
+    <tr>
+        <td>2</td>
+        <td>sofaPaka</td>
+        <td>29</td>
+    </tr>
+    <tr>
+        <td>3</td>
+        <td>Gor Mahia</td>
+        <td>28</td>
+    </tr>
+    </tbody>
+    <tfoot>
+    <tr>
+        <td colspan="2">Total Ticket Pricing</td>
+        <td>$5.50</td>
+    </tr>
+    </tfoot>
+ </table>
+<!--Form-->
+<form method="post">
+    <label> Team Name</label>
+    <input type="text" placeholder="Enter Team Name" name="Team_Name"/>
+    <label>Season Points</label>
+    <input type="number" placeholder="Enter Points" name="Team_points"/>
+    <label> Team Email</label>
+    <input type="Email" placeholder="Enter Team email" name="Team_email"/>
+    <label> Team Picture</label>
+    <input type="file" name="Team_pic"/>
+    <label>Home Team Color</label>
+    <select name="team_color">
+        <option value="red">Red</option>
+        <option value="green">Green</option>
+        <option value="purple">Purple</option>
+    </select>
+    <input type="submit" value="submit team"/>
+    <input type="reset"  value="Reset Form">
+
+</form>
 </body>
-
-
 </html>
